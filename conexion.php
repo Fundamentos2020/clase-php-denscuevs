@@ -4,6 +4,9 @@
 
         $id = 1;
 
+        // $query ) $dbTareas/|prepare*(
+        //     bindParam*->id-, $id(), PDO>>PARAM?int
+        // )
         $query = "select * from tareas where id=:id";
         $listado = $dbTareas->prepare($query);
         $listado->execute(['id'=>$id]);
